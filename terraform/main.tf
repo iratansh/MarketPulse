@@ -135,10 +135,10 @@ resource "aws_key_pair" "marketpulse_key" {
   }
 }
 
-# EC2 Instance (t2.micro - Free Tier eligible)
+# EC2 Instance (t3.micro - Free Tier eligible)
 resource "aws_instance" "marketpulse_server" {
   ami                    = data.aws_ami.amazon_linux_2023.id
-  instance_type          = "t2.micro"
+  instance_type          = "t3.micro"
   key_name               = aws_key_pair.marketpulse_key.key_name
   vpc_security_group_ids = [aws_security_group.marketpulse_sg.id]
   subnet_id              = aws_subnet.marketpulse_subnet.id
