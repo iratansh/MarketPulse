@@ -13,5 +13,5 @@ variable "ssh_public_key_path" {
 variable "github_repo_url" {
   description = "GitHub repository URL for MarketPulse project"
   type        = string
-  default     = "https://github.com/yourusername/marketpulse.git"
+  default     = "https://github.com/iratansh/MarketPulse.git"
 }
